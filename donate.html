@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unflying｜共鳴の金額</title>
+  <meta name="description" content="これは販売ではありません。共鳴のための、小さな重さです。" />
+
+  <!-- PayPal SDK (1ページにつき1回のみ) -->
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=BAAWXMDHSpJHnmJAQD3hKpIcMzf5uJofj4JRKvi3ded_ViwzV_DmkpQD9IXvafEHFk1wV180LW150JD7NQ&components=hosted-buttons&disable-funding=venmo&currency=JPY">
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b0b0c;
+      --card:#121214;
+      --text:#e9e9ea;
+      --muted:#a7a7ad;
+      --line:#24242a;
+      --accent:#d7d7dd;
+    }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN",
+                   "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, #1a1a1f 0%, var(--bg) 55%) no-repeat;
+      color:var(--text);
+    }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 18px 72px;
+    }
+    header{
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+    .kicker{
+      letter-spacing: .12em;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    h1{
+      margin: 10px 0 8px;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .lead{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 62ch;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .card{
+      grid-column: span 12;
+      background: linear-gradient(180deg, #141418 0%, var(--card) 100%);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 16px;
+    }
+    @media (min-width: 780px){
+      .card.half{ grid-column: span 6; }
+    }
+    .card h2{
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+    .card p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .note{
+      margin-top: 18px;
+      border-top: 1px dashed var(--line);
+      padding-top: 14px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 13px;
+    }
+    .mini{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    footer{
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">UNFLYING</div>
+      <h1>共鳴の金額</h1>
+      <p class="lead">
+        これは販売ではありません。<br/>
+        Unflyingに対して、あなたが感じた距離を金額にしてください。<br/>
+        小さくても、静かでも、深くても、自由でもいい。
+      </p>
+      <p class="mini">
+        <a href="/">← トップへ戻る</a>
+      </p>
+    </header>
+
+    <section class="grid">
+      <!-- 寄付１ -->
+      <article class="card half">
+        <h2>寄付１｜小さな参加（2,000円）</h2>
+        <p>まず触れてみる。軽い握手みたいな共鳴。</p>
+        <div id="paypal-container-V35LD96GUMYDA"></div>
+      </article>
+
+      <!-- 寄付２ -->
+      <article class="card half">
+        <h2>寄付２｜静かな支援（5,000円）</h2>
+        <p>声を大きくしない応援。静かな背中押し。</p>
+        <div id="paypal-container-SNVYVEFJJZDRN"></div>
+      </article>
+
+      <!-- 寄付３ -->
+      <article class="card half">
+        <h2>寄付３｜深い共鳴（10,000円）</h2>
+        <p>ここまで来た人のための、深い参加。</p>
+        <div id="paypal-container-BSWZ62JPVGB3W"></div>
+      </article>
+
+      <!-- 寄付４ -->
+      <article class="card half">
+        <h2>寄付４｜ご自由に</h2>
+        <p>あなたが決める距離。金額入力ができる設定の場合はこちら。</p>
+        <div id="paypal-container-VFCEEG9V7W2VY"></div>
+      </article>
+    </section>
+
+    <div class="note">
+      <div>※ 注意</div>
+      <div>・Unflyingは物品購入ではなく、プロジェクトへの「寄付／支援」として扱います。</div>
+      <div>・「ご自由に」が金額入力できない場合：PayPal側のボタン作成設定で「購入者が金額を入力」を有効化して、新しいHosted Button IDを発行してください。</div>
+      <div>・うまく表示されない場合：広告ブロッカー等でPayPalスクリプトが止まることがあります。</div>
+    </div>
+
+    <footer>
+      Unflying is unfinished, on purpose.
+    </footer>
+  </div>
+
+  <!-- Hosted Buttons render（SDK読み込み後に実行） -->
+  <script>
+    // 念のため paypal が読める状態になるまで待つ
+    (function initPayPalButtons(){
+      if (!window.paypal || !paypal.HostedButtons) {
+        setTimeout(initPay
