@@ -87,3 +87,115 @@
     .card p{
       margin: 0 0 12px;
       color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .note{
+      margin-top: 18px;
+      border-top: 1px dashed var(--line);
+      padding-top: 14px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 13px;
+    }
+    .warn{
+      margin-top: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+    footer{
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">UNFLYING</div>
+      <h1>共鳴の金額</h1>
+      <p class="lead">
+        これは販売ではありません<br/>
+        Unflyingに対してあなたが感じた距離を金額にしてください<br/>
+        小さくても静かでも深くても自由でもいい
+      </p>
+      <p class="mini">
+        <a href="index.html">← トップへ戻る</a>
+      </p>
+
+      <div class="warn">
+        PayPalのボタンは外部スクリプトで表示されます<br/>
+        AdBlockなどでpaypal.comがブロックされるとボタンが表示されません<br/>
+        表示されない場合は拡張機能を一時停止するかpaypal.comを許可してください
+      </div>
+    </header>
+
+    <section class="grid">
+      <article class="card half">
+        <h2>小さな参加　2000円</h2>
+        <p>まず触れてみる</p>
+        <div id="paypal-container-V35LD96GUMYDA"></div>
+      </article>
+
+      <article class="card half">
+        <h2>静かな支援　5000円</h2>
+        <p>声を大きくしない応援</p>
+        <div id="paypal-container-SNVYVEFJJZDRN"></div>
+      </article>
+
+      <article class="card half">
+        <h2>深い共鳴　10000円</h2>
+        <p>深く参加する</p>
+        <div id="paypal-container-BSWZ62JPVGB3W"></div>
+      </article>
+
+      <article class="card half">
+        <h2>共鳴の金額　自由</h2>
+        <p>あなたが決める距離</p>
+        <div id="paypal-container-VFCEEG9V7W2VY"></div>
+      </article>
+    </section>
+
+    <div class="note">
+      <div>※ 注意</div>
+      <div>Unflyingは物品購入ではなく寄付 支援として扱います</div>
+      <div>共鳴の金額 自由 が金額入力できない場合 PayPal側のボタン設定で購入者が金額を入力を有効化してください</div>
+    </div>
+
+    <footer>
+      Unflying is unfinished, on purpose
+    </footer>
+  </div>
+
+  <script>
+    (function initPayPalButtons(){
+      if (!window.paypal || !paypal.HostedButtons) {
+        setTimeout(initPayPalButtons, 80);
+        return;
+      }
+
+      paypal.HostedButtons({ hostedButtonId: "V35LD96GUMYDA" })
+        .render("#paypal-container-V35LD96GUMYDA");
+
+      paypal.HostedButtons({ hostedButtonId: "SNVYVEFJJZDRN" })
+        .render("#paypal-container-SNVYVEFJJZDRN");
+
+      paypal.HostedButtons({ hostedButtonId: "BSWZ62JPVGB3W" })
+        .render("#paypal-container-BSWZ62JPVGB3W");
+
+      paypal.HostedButtons({ hostedButtonId: "VFCEEG9V7W2VY" })
+        .render("#paypal-container-VFCEEG9V7W2VY");
+    })();
+  </script>
+</body>
+</html>
