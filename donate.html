@@ -6,7 +6,7 @@
   <title>Unflying｜共鳴の金額</title>
   <meta name="description" content="これは販売ではありません 共鳴のための小さな重さです" />
 
-  <!-- PayPal SDK 1ページにつき1回のみ -->
+  <!-- PayPal SDK（1ページにつき1回） -->
   <script
     src="https://www.paypal.com/sdk/js?client-id=BAAWXMDHSpJHnmJAQD3hKpIcMzf5uJofj4JRKvi3ded_ViwzV_DmkpQD9IXvafEHFk1wV180LW150JD7NQ&components=hosted-buttons&disable-funding=venmo&currency=JPY">
   </script>
@@ -36,7 +36,7 @@
       padding: 48px 18px 72px;
     }
     header{
-      margin-bottom: 24px;
+      margin-bottom: 18px;
       border-bottom: 1px solid var(--line);
       padding-bottom: 18px;
     }
@@ -56,6 +56,7 @@
       color: var(--muted);
       line-height: 1.7;
       max-width: 62ch;
+      font-size: 14px;
     }
     .mini{
       margin-top: 12px;
@@ -64,11 +65,23 @@
       line-height: 1.7;
     }
 
+    .rule{
+      margin-top: 14px;
+      padding: 12px 12px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+    .rule strong{ color: var(--text); font-weight: 600; }
+
     .grid{
       display:grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
-      margin-top: 22px;
+      margin-top: 18px;
     }
     .card{
       grid-column: span 12;
@@ -82,32 +95,24 @@
     }
     .card h2{
       margin: 0 0 6px;
-      font-size: 18px;
+      font-size: 16px;
     }
     .card p{
       margin: 0 0 12px;
       color: var(--muted);
       line-height: 1.7;
-      font-size: 14px;
-    }
-    .note{
-      margin-top: 18px;
-      border-top: 1px dashed var(--line);
-      padding-top: 14px;
-      color: var(--muted);
-      line-height: 1.8;
       font-size: 13px;
     }
-    .warn{
-      margin-top: 14px;
-      padding: 10px 12px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: rgba(255,255,255,0.03);
+    .tag{
+      display:inline-block;
+      margin-top: 6px;
+      padding: 2px 8px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      font-size: 11px;
       color: var(--muted);
-      font-size: 12px;
-      line-height: 1.7;
     }
+
     footer{
       margin-top: 28px;
       color: var(--muted);
@@ -126,46 +131,48 @@
       <h1>共鳴の金額</h1>
       <p class="lead">
         これは販売ではありません<br/>
-        あなたが感じた距離を金額にしてください<br/>
+        あなたが感じた距離を 金額にしてください
+      </p>
+
+      <div class="rule">
+        <div><strong>深い共鳴（10,000円）のみ</strong> コインが返礼として届きます</div>
+        <div>それ以外の距離は 支援として受け取ります（コインは付属しません）</div>
+      </div>
+
+      <p class="mini">
+        <a href="index.html">← トップへ戻る</a>
       </p>
     </header>
 
+    <section class="grid">
+      <article class="card half">
+        <h2>小さな参加</h2>
+        <p>まず触れてみる</p>
+        <span class="tag">支援のみ</span>
+        <div id="paypal-container-V35LD96GUMYDA"></div>
+      </article>
 
-<section class="grid">
-  <article class="card half">
-    <p>触れてみる それだけでいい</p>
-    <div id="paypal-container-V35LD96GUMYDA"></div>
-  </article>
+      <article class="card half">
+        <h2>静かな支援</h2>
+        <p>言葉より先に残るもの</p>
+        <span class="tag">支援のみ</span>
+        <div id="paypal-container-SNVYVEFJJZDRN"></div>
+      </article>
 
-  <article class="card half">
-    <p>言葉より先に残るもの</p>
-    <div id="paypal-container-SNVYVEFJJZDRN"></div>
-  </article>
+      <article class="card half">
+        <h2>深い共鳴</h2>
+        <p>コインが歩きます</p>
+        <span class="tag">コインあり</span>
+        <div id="paypal-container-BSWZ62JPVGB3W"></div>
+      </article>
 
-  <article class="card half">
-    <p>長い距離を渡ってきた人へ</p>
-    <div id="paypal-container-BSWZ62JPVGB3W"></div>
-  </article>
-
-  <article class="card half">
-    <p>距離はあなたが決める</p>
-    <div id="paypal-container-VFCEEG9V7W2VY"></div>
-  </article>
-</section>
-    <div class="warn">
-      PayPalのボタンは外部スクリプトで表示されます<br/>
-      AdBlockなどでpaypal.comがブロックされるとボタンが表示されません<br/>
-      表示されない場合は拡張機能を一時停止するかpaypal.comを許可してください
-    </div>
-    <p class="mini">
-      <a href="index.html">← トップへ戻る</a>
-    </p>
-
-    <div class="note">
-      <div>※ 注意</div>
-      <div>Unflyingは物品購入ではなく寄付 支援として扱います</div>
-      <div>共鳴の金額　自由 が金額入力できない場合 PayPal側のボタン設定で購入者が金額を入力を有効化してください</div>
-    </div>
+      <article class="card half">
+        <h2>共鳴の金額</h2>
+        <p>あなたが決める距離</p>
+        <span class="tag">支援のみ</span>
+        <div id="paypal-container-VFCEEG9V7W2VY"></div>
+      </article>
+    </section>
 
     <footer>
       Unflying is unfinished, on purpose
